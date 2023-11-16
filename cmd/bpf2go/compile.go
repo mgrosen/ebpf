@@ -90,6 +90,8 @@ func compile(args compileArgs) error {
 		)
 	}
 
+	fmt.PrintLn(cmd.String())
+
 	if err := cmd.Run(); err != nil {
 		return fmt.Errorf("can't execute %s: %s", args.cc, err)
 	}
